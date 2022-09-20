@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        border: 1px solid #000;
+      }
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        <table> : 표의 범위를 지정. 
+        thead, tbody, tfoot, caption으로 구성.
+    -->
+    <table>
+      <!-- <caption> : 표의 제목 -->
+      <caption>
+        A반 성적표
+      </caption>
+      <!-- <thead> : 테이블의 머리. -->
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>수학</th>
+        </tr>
+      </thead>
+      <!-- <tbody> : table body의 약자. 실제 표에 표시하고자 하는 데이터를 입력. -->
+      <tbody>
+        <!-- 
+            <tr> : table row(행)의 약자 .
+            <th> : 각 데이터의 제목. 무슨 데이터인지 명시.
+            <td> : table date의 약자. 각 데이터 셀을 명시.
+        -->
+        <tr>
+          <td>황보석</td>
+          <td>90점</td>
+          <td>80점</td>
+          <td>40점</td>
+        </tr>
+        <tr>
+          <td>김정철</td>
+          <td>100점</td>
+          <td>100점</td>
+          <td>80점</td>
+        </tr>
+      </tbody>
+      <!-- <tfoot> : table footer의 약자. 표의 요약. -->
+      <tfoot></tfoot>
+
+      <!-- A반 성적표의 열과 행 바꾸기 -->
+      <table>
+        <caption>
+          A반 성적표-B
+        </caption>
+        <tbody>
+          <tr>
+            <th>반</th>
+            <th>국어</th>
+            <th>수학</th>
+            <th>영어</th>
+          </tr>
+          <tr>
+            <th rowspan="3">A반</th>
+            <td>100점</td>
+            <td>90점</td>
+            <td rowspan="3">80점</td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td>10점</td>
+            <td>90점</td>
+          </tr>
+          <tr>
+            <td>10점</td>
+            <td>90점</td>
+          </tr>
+          <tr>
+            <th>B반</th>
+            <td colspan="2">100점</td>
+            <!-- <td>100점</td> -->
+            <td>80점</td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+  </body>
+</html>
