@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        <a> : anchor(닻)의 약자. 다른 웹 문서로 이동하는 태그. 즉 다른 문서와 연결. 
+        href : hyper reference(하이퍼 텍스트 참조). 연결할 문서 혹은 위치 경로를 지정.
+           => 다른 사이트 이동시 http 혹은 https 앞에 붙여야한다(절대경로)
+           => 특정 요소의 위치로 이동할 수도 있다.
+        target : 주소 이동 시 웹 문서를 어떻게 열지 지정한다.
+           => "_blank" 지정시 새 탭에서 열린다.
+           => "_self" 원래 탭에서 열린다(기본값).
+    -->
+    <a href="https://www.google.com">구글로 이동</a>
+
+    <!-- 로컬 폴더내에서 이동 => 웹 사이트의 기본 구조 -->
+    <a href="./1_syntax.html">1. HTML의 문법</a>
+    <a href="./2_structure.html" target="_blank">2. HTML 문서의 구조</a>
+    <a href="#title">이동</a>
+
+    <h2 style="margin-top: 500px" id="title">여기로 이동!</h2>
+
+    <!-- 메인 페이지 => html, css, js에 대한 설명을 적은 페이지로 이동 -->
+  </body>
+</html>
