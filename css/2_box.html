@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      p {
+        background-color: tomato;
+        width: 200px;
+        height: 200px;
+        text-align: right;
+
+        /* 바깥 여백 */
+        margin: 50px 20px 10px 5px;
+
+        /* 바깥 여백 개별 지정 */
+        margin-left: 100px;
+
+        /* 가로방향으로 가운데로 보내는 기법 */
+        margin: 0 auto;
+      }
+      p img {
+        width: 100px;
+        height: 50%;
+      }
+      a {
+        background-color: yellow;
+        /* 인라인 요소는 너비, 높이 지정 불가능 */
+        width: 100px;
+        height: 100px;
+
+        display: inline-block;
+      }
+
+      .big {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        /* color: white; */
+
+        margin-top: 50px;
+
+        /* 안쪽여백 */
+        padding: 10px;
+
+        /* border: 5px dotted black; */
+        border-width: 5px;
+        border-style: dashed;
+        border-color: black;
+
+        box-sizing: border-box;
+
+        /* overflow: scroll; */
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      section {
+        background: yellow;
+        width: 300px;
+        height: 300px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #ff0000;
+        border: 5px solid blue;
+
+        overflow: hidden;
+
+        padding: 10px 0;
+        margin: 0 20px;
+
+        display: inline-block;
+
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Box</h1>
+    <p>
+      p 태그는 블록 레벨 요소입니다.
+      <img src="/assets/6982fdc1054c503af88bdefeeb7c8fa8 (1).jpg" alt="" />
+    </p>
+
+    <div class="big">
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+        culpa.
+      </section>
+    </div>
+
+    <div class="box">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+      facere maiores necessitatibus incidunt voluptate possimus, rem blanditiis
+      rerum. Quod provident veniam ducimus reiciendis minus obcaecati ullam
+      perspiciatis perferendis aliquam facilis quasi fugiat harum maiores
+      doloremque rerum quaerat similique, doloribus impedit totam ex amet
+      consequuntur assumenda? Iste, perferendis distinctio ea quibusdam cumque
+      at qui consectetur odit natus doloremque sapiente velit rem corrupti
+      delectus cupiditate dolore. Deleniti praesentium quidem ducimus, aliquam
+      eaque nobis rerum maiores doloribus iure nisi, a pariatur maxime! Qui
+      deleniti sapiente dolores sequi. Quia consequuntur voluptatum optio.
+      Maiores atque aperiam officia architecto necessitatibus expedita accusamus
+      porro eligendi eum molestias!
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>

@@ -13,6 +13,7 @@
         name : 서버에 데이터를 보낼 때 데이터의 이름을 지정.
         autofocus : 웹 문서 실행시 포커스를 지정. 1개만 지정해야한다.
         disabled : 입력을 비활성화한다.
+        required : 미입력시 유효성 검사에 걸린다.
     -->
     <!-- 
         <label> : <input> 항목에 대한 설명을 지정
@@ -27,12 +28,29 @@
         method : 데이터 전송 방법을 지정.
            => get은 정보 받아올 때 사용. 주소창에 input 값 노출. 노출돼도 상관없는 정보만 나와야한다.
            => post 서버에 데이터를 등록할 때 사용. 주소창에 데이터 노출 x.
+        novalidate : 지정시 유효성 검사를 건너띈다.
+        autocomplete : 자동완성 여부를 "on" 혹은 "off"로 지정할 수 있다.
     -->
-    <form action="/server" method="post">
+
+    <form
+      action="/server"
+      method="get"
+      id="form1"
+      novalidate
+      autocomplete="off"
+    >
       <ul>
         <li>
           <label for="userId">아이디 :</label>
-          <input type="text" placeholder="아이디를 입력하세요." id="userId" />
+          <input
+            type="text"
+            placeholder="아이디를 입력하세요."
+            id="userId"
+            required
+          />
+        </li>
+        <li>
+          <label> 이메일 : <input type="email" /> </label>
         </li>
         <li>
           비밀번호 :
@@ -57,16 +75,39 @@
           <!-- input:radio : 여러개의 선택지 중 하나만 선택해야할 경우 사용 -->
           마케팅 수신 동의 :
           <label>
-            동의 <input type="radio" name="marketing" id="" value="1" />
+            동의 <input type="radio" name="marketing" id="" value="1" checked />
           </label>
           <label>
-            미동의 <input type="radio" name="marketing" value="2"
+            미동의 <input type="radio" name="marketing" value="2" checked
           /></label>
+        </li>
+        <li>
+          <label>
+            도시 :
+            <select name="city" id="">
+              <option value="seoul">서울특별시</option>
+              <option value="incheon">인천광역시</option>
+              <option value="">경기도</option>
+              <option value="">강원도</option>
+            </select>
+          </label>
         </li>
       </ul>
       <button type="submit">전송</button>
       <button type="reset">초기화</button>
     </form>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quas quod
+      pariatur quia facere est, fuga deleniti autem ipsam labore necessitatibus
+      consequuntur totam! Eligendi ea dicta nobis asperiores maiores
+      voluptatibus saepe dolor modi qui. Harum nemo distinctio dicta mollitia
+      culpa quod perferendis libero doloremque. Corporis illum quo hic incidunt
+      reiciendis?
+    </p>
+
+    <!-- <button>의 form 속성을 통해서 <form> 밖에서 제어할 수 있다. -->
+    <button type="submit" form="form1">전송</button>
 
     <!-- 제가 드리는 양식을 그대로 작성. -->
   </body>
