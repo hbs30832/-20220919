@@ -1,0 +1,33 @@
+html {
+  /* 글씨체를 지정. 지정한 폰트가 없을시 다음 폰트 적용. */
+  font-family: monospace, "Courier New";
+  font-size: 12px;
+}
+
+body {
+  font-size: 14px;
+}
+
+p {
+  /* 글씨 크기 */
+  /* rem : root에 지정된 크기에 대한 비율 */
+  font-size: 3rem;
+
+  /* em : 부모 요소의 글씨 크기에 대한 비율 */
+  font-size: 2em;
+
+  /* 글씨의 가중도(굵기) */
+  /* font-weight: 700; 100~900 사이의 숫자(100단위). 보통 굵기 400. */
+  font-weight: bold;
+
+  /* 글씨의 가로 정렬 */
+  text-align: center;
+}
+
+span {
+  /* 
+    글씨를 꾸미는 선을 긋는다.
+    선의 위치, 종류, 두께, 색상을 지정할 수 있다.
+  */
+  text-decoration: overline wavy 3px green;
+}

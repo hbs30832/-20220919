@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        border: solid 3px red;
+      }
+      .black {
+        border-color: black;
+      }
+
+      #animalList li {
+        border: 1px solid yellow;
+      }
+
+      #animalList > li {
+        border-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box black"></div>
+    <div class="box"></div>
+    <ul id="animalList">
+      <li>
+        HTML
+        <ul>
+          <li>스피츠</li>
+          <li>말티즈</li>
+          <li>도베르만</li>
+        </ul>
+      </li>
+      <li>
+        고양이
+        <ol>
+          <li>러시안 블루</li>
+          <li>코리안 숏 헤어</li>
+          <li>먼치킨</li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
