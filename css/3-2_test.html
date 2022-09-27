@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: 300px;
+        height: 200px;
+        /* border: 3px solid black; */
+
+        margin-top: 30px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 3px solid red;
+        text-align: center;
+
+        /* 
+            마진 상쇄
+                - 인접형제의 상하 마진이 겹칠 때
+                - 부모요소의 
+        */
+        margin-top: 10px;
+      }
+      span {
+        /* 인라인 요소에 padding, margin을 적용할 경우 상하는 제대로 작동하지 않는다. */
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid red;
+
+        display: inline-block;
+      }
+
+      nav {
+        color: red;
+      }
+
+      #gnbList > li {
+        display: inline-block;
+        text-align: center;
+        /* height: 20px;
+        overflow: hidden; */
+
+        border: 1px solid black;
+      }
+
+      #gnbList > li:hover {
+        /* overflow: visible; */
+        height: initial; /* 초기값 */
+      }
+
+      #gnbList > li:hover ul {
+        display: initial;
+      }
+
+      #gnbList > li ul {
+        /* html 문서 상에서 없는 것처럼 취급 */
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="gnb">
+        <ul id="gnbList">
+          <li>
+            <a href="">HTML</a>
+            <ul>
+              <li><a href="">HTML이란?</a></li>
+              <li><a href="">HTML 문법</a></li>
+              <li><a href="">HTML 구조</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">CSS</a>
+            <ul>
+              <li><a href="">CSS란?</a></li>
+              <li><a href="">CSS 문법</a></li>
+              <li><a href="">CSS 선택자</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="q">JavaScript</a>
+            <ul>
+              <li><a href="">JavaScript란?</a></li>
+              <li><a href="">JavaScript 적용법</a></li>
+              <li><a href="">JavaScript 실행법</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <span>인라인</span>
+    </div>
+  </body>
+</html>
