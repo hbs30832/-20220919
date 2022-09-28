@@ -1,0 +1,59 @@
+body {
+  height: 2000px;
+}
+
+.container {
+  width: 500px;
+  height: 300px;
+  border: 3px solid red;
+  position: relative;
+
+  padding: 20px;
+
+  overflow-y: scroll;
+}
+
+.container .inner {
+  border: 3px solid green;
+  position: relative;
+  height: 1000px;
+  width: 1000px;
+  margin-bottom: 500px;
+}
+
+.container .box {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+
+.container .box01 {
+  background-color: red;
+  top: 20px;
+  left: -20px;
+  position: relative;
+  z-index: 100;
+}
+
+.container .box02 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.container .box03 {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.container .box:nth-child(4) {
+  background-color: tomato;
+  position: sticky;
+  /* top: 10px; */
+  z-index: 1000;
+  right: 10px;
+}
