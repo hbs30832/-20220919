@@ -1,0 +1,87 @@
+/* 나열 : inline-block, float */
+#header {
+  background-color: #ddd;
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  left: 20px;
+  font-size: 1rem;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+#gnb {
+  text-align: center;
+  font-size: 0;
+}
+
+#gnbList {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+#gnbList li {
+  float: left;
+}
+
+#gnbList li a {
+  display: block;
+  padding: 10px 0;
+  width: 100px;
+}
+
+#gnbList li a:hover {
+  background-color: #bbb;
+  color: #fff;
+}
+
+.banner {
+  margin-top: 70px;
+}
+
+.banner h2 {
+  text-align: center;
+}
+
+.bannerList {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.bannerList li {
+  width: 32%;
+  height: 200px;
+  border: 3px solid black;
+  float: left;
+}
+
+.bannerList li:nth-child(2) {
+  margin: 0 2%;
+}
+
+.bannerList li {
+  background: center/cover no-repeat;
+}
+
+.bannerList li:first-child {
+  background-image: url("/assets/yeji01.jpeg");
+}
+.bannerList li:nth-child(2) {
+  background-image: url("/assets/yeji02.jpeg");
+}
+.bannerList li:last-child {
+  background-image: url("/assets/yeji03.jpeg");
+}
+
+.bannerList li a {
+  display: block;
+  height: 100%;
+}
+
+.bannerList li:hover {
+  background-size: auto 120%;
+}

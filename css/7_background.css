@@ -7,9 +7,11 @@ body {
   height: 300px;
   border: 3px solid black;
 
+  background-color: rgb(255, 255, 0);
   background-color: #000000;
 
-  background-image: url("/assets/6982fdc1054c503af88bdefeeb7c8fa8\ \(1\).jpg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/YellowLabradorLooking_new.jpg/220px-YellowLabradorLooking_new.jpg");
+
   background-size: contain;
   background-size: cover;
   background-size: auto 200px;
