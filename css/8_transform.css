@@ -26,7 +26,6 @@
 }
 
 .translate .x:hover {
-  width: 200px;
   transform: translateX(20px);
   background: black;
 }

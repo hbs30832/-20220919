@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  width: 100px;
+}
+
+.container {
+  /* height: 500px; */
+  display: flex;
+  border: 3px solid black;
+  flex-direction: row;
+  justify-content: flex-start; /* 주축에 대한 정렬 방법 지정 */
+
+  /* align-items: center; 교차축에 대한 정렬 방법 지정 */
+
+  width: 900px;
+  /* flex-wrap: wrap; */
+}
+
+.box {
+  background-color: red;
+
+  /* 주축에 대한 아이템의 최소크기 */
+  /* flex-grow: 1; */
+  /* flex-shrink: 4; */
+  /* flex: auto; */
+  /* flex: none; */
+
+  /* flex : 0 1 auto; */
+
+  flex: 1;
+}
+
+.box:nth-child(1) {
+}
+
+.box:nth-child(2) {
+  background-color: blue;
+  /* flex-basis: 100px; */
+  /* flex-shrink: 1; */
+}
+
+button {
+  width: 100px;
+}
