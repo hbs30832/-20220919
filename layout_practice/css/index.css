@@ -5,10 +5,7 @@
   position: relative;
 
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  height: 40px;
 }
 
 #logo {
@@ -34,6 +31,8 @@
 }
 
 #gnbList li a {
+  display: block;
+  padding: 10px 0;
 }
 
 #gnbList li a:hover {
