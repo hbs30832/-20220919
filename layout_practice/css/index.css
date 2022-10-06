@@ -1,40 +1,39 @@
 /* 나열 : inline-block, float */
+
 #header {
   background-color: #ddd;
   position: relative;
-  overflow: hidden;
 
-  animation: show 0.4s 1s both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
 }
 
 #logo {
+  font-size: 1.4rem;
+
   position: absolute;
-  left: 20px;
-  font-size: 1rem;
+  left: 10px;
   top: 50%;
 
   transform: translateY(-50%);
 }
 
 #gnb {
-  text-align: center;
-  font-size: 0;
 }
 
 #gnbList {
-  display: inline-block;
-  font-size: 1rem;
+  display: flex;
 }
 
 #gnbList li {
-  float: left;
+  width: 100px;
+  text-align: center;
 }
 
 #gnbList li a {
-  display: block;
-  padding: 10px 0;
-  width: 100px;
-  transition: 0.25s;
 }
 
 #gnbList li a:hover {
