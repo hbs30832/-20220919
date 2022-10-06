@@ -49,46 +49,36 @@
 }
 
 .bannerList {
-  width: 450px;
-  margin: 0 auto;
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .bannerList li {
-  width: 32%;
-  height: 200px;
   border: 3px solid black;
-  float: left;
 }
-
-.bannerList li:nth-child(2) {
-  margin: 0 2%;
-}
-
-.bannerList li {
-  background: center / auto 100% no-repeat;
-  transition: 0.25s;
-
-  /* background-size: auto 100%; */
-}
-
-.bannerList li:first-child {
-  background-image: url("/assets/yeji01.jpeg");
-}
-.bannerList li:nth-child(2) {
-  background-image: url("/assets/yeji02.jpeg");
-}
-.bannerList li:last-child {
-  background-image: url("/assets/yeji03.jpeg");
-}
-
 .bannerList li a {
-  display: block;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 190px;
+
+  overflow: hidden;
 }
 
-.bannerList li:hover {
-  background-size: auto 120%;
+.bannerList li a:hover img {
+  height: 120%;
+}
+
+.bannerList li img {
+  height: 100%;
+
+  transition: 0.25s;
+}
+
+.bannerList li:nth-of-type(2) {
+  margin: 0 10px;
 }
 
 .btnChat {
