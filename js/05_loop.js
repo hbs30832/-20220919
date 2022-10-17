@@ -52,3 +52,8 @@ while (true) {
   // 숫자를 넣으면 반복문을 끝낸다.
   if (!isNaN(parseInt(value))) break;
 }
+
+// do ~ while : 코드블록 한번은 실행한 후 그 다음부터 조건 체크를 한다.
+do {
+  console.log("do while문 실행!");
+} while (false);
