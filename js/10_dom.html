@@ -27,6 +27,14 @@
         height: 50px;
         background-color: red;
         border-radius: 50%;
+        transition: 0.25s;
+        position: absolute;
+        top: 400px;
+        left: 0;
+      }
+
+      .circle.move {
+        transform: translateY(200px);
       }
     </style>
   </head>
@@ -37,6 +45,7 @@
     </div>
 
     <div class="circle"></div>
+    <div class="circle move"></div>
     <script>
       // WEB API => DOM API: HTML 문서에 대한 다양한 프로퍼티와 메서드를 제공한다.
 
@@ -111,11 +120,11 @@
         elem.style.borderRadius = "15px";
       });
 
-      /* 
+      /*
         특정 클래스에 대해서 스타일을 미리 지정하고 클래스명 추가 및 제거(동적)
       */
 
-      /* 
+      /*
         Element.prototype.classList : 해당 요소가 가지고 있는 클래스 목록
         Element.prototype.classList.add : 클래스 추가
         Element.prototype.classList.remove : 클래스 제거
@@ -131,6 +140,28 @@
         // 클래스 목록에 기존 클래스 제거
         boxList[0].classList.remove("box");
       });
+
+      // .circle 요소를 취득해서 클릭시 200px 상하로 움직이기
+
+      // 1. 요소 취득 => 여러개냐 한개냐
+      // 2. 이벤트 바인딩 => 내일 수업
+      // 3. 상하로 움직이기 => 스타일, 클래스
+
+      let circle = document.querySelector(".circle");
+      let circleList = document.querySelectorAll(".circle");
+      //   circle.addEventListener("click", function () {
+      //     circle.classList.toggle("move");
+      //   });
+
+      circleList.forEach((item) => {
+        item.addEventListener("click", addClassMove);
+      });
+
+      function addClassMove() {
+        circleList.forEach((item) => {
+          item.classList.toggle("move");
+        });
+      }
     </script>
   </body>
 </html>
