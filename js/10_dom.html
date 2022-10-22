@@ -50,7 +50,6 @@
       // WEB API => DOM API: HTML 문서에 대한 다양한 프로퍼티와 메서드를 제공한다.
 
       // html 요소 취득
-
       console.log("----- getEelementById -----");
       /*
               getElementById() : 인자로 전달된 id값을 가진 요소 1개를 반환한다.
@@ -67,16 +66,23 @@
                   => 배열이 아니라 HTMLCollection이라는 유사배열을 반환.
                       => 각 요소에 적용할 때 배열로 만드는 과정 혹은 for문을 써야한다.
                       => 스프레드 문법, Array.from() 등을 통해 배열로 바꿀 수 있다.
+                      => live 객체이다.
         */
       let boxList = document.getElementsByClassName("box");
       console.log(boxList);
       let boxArr = Array.from(boxList); // 유사배열을 배열로 바꾸기
       console.log(boxArr);
 
+      // live 객체라서 원하는대로 동작하지 않을 수 있다.
+      for (let i = 0; i < boxList.length; i++) {
+        console.log(boxList);
+        boxList[i].classList.remove("box");
+      }
+
       console.log("----- querySelector -----");
       /*
-              querySelector : 선택자를 통해서 요소를 1개 획득한다.
-                  => 해당하는 요소가 여러개일 경우 가장 상위에 있는 요소 1개만 반환한다.
+          querySelector : 선택자를 통해서 요소를 1개 획득한다.
+              => 해당하는 요소가 여러개일 경우 가장 상위에 있는 요소 1개만 반환한다.
       */
       let box = document.querySelector(".box");
       console.log(box);
@@ -85,7 +91,7 @@
       /*
               querySelectorAll() : 선택자를 통해서 해당하는 요소를 모두 반환한다.
                   => NodeList라는 유사배열로 반환한다.
-                  => 유사배열이만 forEach가 구현되어있다.
+                  => 유사배열이지만 forEach가 구현되어있다.
         */
       let boxList02 = document.querySelectorAll(".box");
       console.log(boxList02);
