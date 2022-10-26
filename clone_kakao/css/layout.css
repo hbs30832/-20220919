@@ -1,0 +1,108 @@
+html {
+  font-family: "Noto Sans KR";
+}
+
+body {
+  height: 300vh;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: -73px;
+  border-bottom: 1px solid black;
+
+  transition: 0.25s;
+}
+
+#header.onTop {
+  border-bottom: none;
+}
+
+#header.active {
+  top: 0;
+}
+
+#header .wrapperHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* height: 72px; */
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 200px;
+}
+
+#logo a {
+  display: inline-block;
+  width: 75px;
+  height: 25px;
+}
+
+#logo a svg {
+  height: 100%;
+  width: 100%;
+}
+
+#gnbList {
+  display: flex;
+}
+
+#gnbList li a {
+  display: block;
+  height: 72px;
+  line-height: 72px;
+  padding: 0 28px;
+
+  font-weight: 500;
+  color: #888;
+}
+
+#gnbList li a.active {
+  color: #000;
+}
+
+#headerBtns {
+  width: 200px;
+}
+
+#headerBtns ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#headerBtns ul li {
+  margin: 0 10px;
+}
+
+#headerBtns button {
+  border: none;
+  background: none;
+}
+
+#headerBtns svg {
+  width: 25px;
+  stroke: black;
+}
+
+@media screen and (max-width: 1439px) {
+  #header .wrapperHeader {
+    max-width: 952px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #header .wrapperHeader {
+    max-width: 630px;
+    height: 60px;
+  }
+
+  #gnb {
+    display: none;
+  }
+}
