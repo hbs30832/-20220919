@@ -90,6 +90,10 @@ body {
   stroke: black;
 }
 
+#headerBtns li:nth-child(4) {
+  display: none;
+}
+
 @media screen and (max-width: 1439px) {
   #header .wrapperHeader {
     max-width: 952px;
@@ -105,4 +109,15 @@ body {
   #gnb {
     display: none;
   }
+
+  #headerBtns li:nth-child(2),
+  #headerBtns li:nth-child(3) {
+    display: none;
+  }
+
+  #headerBtns li:nth-child(4) {
+    display: block;
+  }
 }
+
+/* min-width : 최소 ~ 이상*/
