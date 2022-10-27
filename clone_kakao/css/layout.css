@@ -15,18 +15,18 @@ body {
   position: fixed;
   width: 100%;
   left: 0;
-  top: -73px;
-  border-bottom: 1px solid black;
+  transform: translateY(0);
+  border-bottom: 1px solid #eee;
 
-  transition: 0.25s;
+  transition: transform 0.25s;
 }
 
 #header.onTop {
   border-bottom: none;
 }
 
-#header.active {
-  top: 0;
+#header.hide {
+  transform: translateY(-100%);
 }
 
 #header .wrapperHeader {

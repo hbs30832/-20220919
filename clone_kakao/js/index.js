@@ -10,10 +10,10 @@ window.addEventListener("scroll", () => {
   // scroll 내려가면 active 클래스 지우기
   if (currScroll < scrollY) {
     headerElem.classList.remove("onTop");
-    if (scrollY > 200) headerElem.classList.remove("active");
+    if (scrollY > 200) headerElem.classList.add("hide");
   }
   // scroll 올라가면 active 클래스 추가하기
-  else headerElem.classList.add("active");
+  else headerElem.classList.remove("hide");
 
   if (scrollY === 0) headerElem.classList.add("onTop");
   currScroll = scrollY;
