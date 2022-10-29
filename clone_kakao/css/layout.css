@@ -1,6 +1,9 @@
 :root {
   --iconsBg: #eee;
   --main-color: #e4230e;
+  --desk-warpper-width: 1296px;
+  --tablet-wrapper-width: 952px;
+  --mobile-wrapper-width: 630px;
 }
 
 html {
@@ -35,7 +38,7 @@ body {
   align-items: center;
 
   /* height: 72px; */
-  max-width: 1296px;
+  max-width: var(--desk-warpper-width);
   margin: 0 auto;
 }
 
@@ -138,15 +141,44 @@ body {
   display: none;
 }
 
+/* 타이틀 영역 */
+.titleBox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 73px;
+  left: 0;
+  border-bottom: 1px solid #eee;
+  transition: top 0.25s;
+}
+
+.wrapperTitle {
+  display: flex;
+  align-items: center;
+  max-width: var(--desk-warpper-width);
+  margin: 0 auto;
+  height: 72px;
+}
+
+.wrapperTitle img {
+  width: 36px;
+}
+
+.wrapperTitle h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
 @media screen and (max-width: 1439px) {
   #header .wrapperHeader {
-    max-width: 952px;
+    max-width: var(--tablet-wrapper-width);
   }
 }
 
 @media screen and (max-width: 1023px) {
   #header .wrapperHeader {
-    max-width: 630px;
+    max-width: var(--mobile-wrapper-width);
     height: 60px;
   }
 

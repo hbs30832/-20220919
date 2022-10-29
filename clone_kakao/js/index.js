@@ -2,18 +2,26 @@ let headerElem = document.getElementById("header");
 let navItemList = document.querySelectorAll("#gnbList > li > a");
 let gnbListElem = document.getElementById("gnbList");
 let btnSideElem = document.querySelector(".btnSide");
+let titleBoxElem = document.querySelector(".titleBox");
 
 let currScroll = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  console.log("실행");
   // scroll 내려가면 active 클래스 지우기
   if (currScroll < scrollY) {
     headerElem.classList.remove("onTop");
-    if (scrollY > 200) headerElem.classList.add("hide");
+    titleBoxElem.style.top = "0";
+    if (scrollY > 200) {
+      headerElem.classList.add("hide");
+      titleBoxElem.style.display = "block";
+    }
   }
   // scroll 올라가면 active 클래스 추가하기
-  else headerElem.classList.remove("hide");
+  else {
+    headerElem.classList.remove("hide");
+    titleBoxElem.style.top = "73px";
+    if (scrollY < 200) titleBoxElem.style.display = "none";
+  }
 
   if (scrollY === 0) headerElem.classList.add("onTop");
   currScroll = scrollY;
